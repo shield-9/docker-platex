@@ -1,4 +1,4 @@
-# texlive.profile written on Mon Jul 23 16:06:20 2018 UTC
+# texlive.profile written on Mon Jul 23 18:05:14 2018 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
 selected_scheme scheme-custom
@@ -18,6 +18,7 @@ collection-latex 1
 collection-latexextra 1
 collection-latexrecommended 1
 collection-pictures 1
+collection-xetex 1
 instopt_adjustpath 0
 instopt_adjustrepo 1
 instopt_letter 0
