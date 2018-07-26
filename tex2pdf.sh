@@ -1,6 +1,6 @@
 fileName=${@%.*}
 
-docker run --rm -v `pwd`/:/latex/ sititou70/platex build "$@"
+docker run --rm -v `pwd`/:/latex/ extendwings/docker-platex build "$@"
 
 rm ${fileName}.aux
 rm ${fileName}.dvi
