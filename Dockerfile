@@ -18,6 +18,7 @@ ENV PATH="/usr/local/texlive/2018/bin/x86_64-linuxmusl:${PATH}"
 VOLUME /latex
 WORKDIR /latex
 
-COPY build /usr/bin/
+COPY tex2pdf /usr/bin/
 
-#ENTRYPOINT ["build"]
+#ENTRYPOINT ["bash"]
+ENTRYPOINT ["tex2pdf"]
