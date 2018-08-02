@@ -11,7 +11,7 @@ RUN WORK_DIR="$(mktemp -d)" && cd $WORK_DIR && \
 	cd && rm -rf $WORK_DIR
 
 
-#RUN apk --no-cache add bash
+RUN apk --no-cache add bash
 
 ENV PATH="/usr/local/texlive/2018/bin/x86_64-linuxmusl:${PATH}"
 
