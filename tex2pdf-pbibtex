@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+platex -shell-escape -synctex=1 "$1"
+
+# if exist .bib file, run pbibtex
+ls *.bib >/dev/null 2>&1
+if [ $? -eq 0 ];
+then
+  pbibtex $(basename $1 .tex)
+fi
+
+platex -shell-escape -synctex=1 "$1"
+platex -shell-escape -synctex=1 "$1"
+
+# make pdf
+dvipdfmx "`basename "$1" .tex`"

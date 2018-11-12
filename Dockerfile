@@ -18,7 +18,7 @@ ENV PATH="/usr/local/texlive/2018/bin/x86_64-linuxmusl:${PATH}"
 VOLUME /latex
 WORKDIR /latex
 
-COPY tex2pdf /usr/bin/
+COPY tex2pdf tex2pdf-pbibtex /usr/bin/
 
 #ENTRYPOINT ["bash"]
 ENTRYPOINT ["tex2pdf"]
