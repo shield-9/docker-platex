@@ -10,7 +10,7 @@ ls *.bib >/dev/null 2>&1
 BIB_EXIST=$?
 set -e
 
-if [ $? -eq 0 ];
+if [ $BIB_EXIST -eq 0 ];
 then
   biber --bblencoding=utf8 -u -U --output_safechars $(basename $1 .tex)
 fi
